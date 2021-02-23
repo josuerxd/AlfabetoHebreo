@@ -194,10 +194,11 @@ private HashMap<String,String> hashMap= new HashMap<String,String>();
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ALEF-BET");
-        setAlwaysOnTop(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -246,6 +247,16 @@ private HashMap<String,String> hashMap= new HashMap<String,String>();
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 5, 510, -1));
 
+        jMenu1.setText("INFO");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -267,6 +278,12 @@ private HashMap<String,String> hashMap= new HashMap<String,String>();
     
 jTable1.getSelectionModel().clearSelection();
     }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+
+        new INFO().setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -305,6 +322,8 @@ jTable1.getSelectionModel().clearSelection();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
